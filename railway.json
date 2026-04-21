@@ -1,0 +1,8 @@
+{
+  "build": {
+    "builder": "dockerfile"
+  },
+  "deploy": {
+    "preDeployCommand": "bash migrate_property.sh"
+  }
+}
