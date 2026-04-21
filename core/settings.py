@@ -80,13 +80,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #    }
 #}
 
+
 import dj_database_url
 import os
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv("postgresql://postgres:UFhCVPJQGcdoYlOVekskAqtUzxlIZhkD@postgres-uiwj.railway.internal:5432/railway"))
+    'default': dj_database_url.config(
+        default=os.getenv("DATABASE_URL")
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
