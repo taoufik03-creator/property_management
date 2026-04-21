@@ -21,5 +21,8 @@ from listings.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', PropertyListView.as_view(),name="property-list"),
+    path("<int:pk>/",PropertyDetailView.as_view(),name="property-details"),
+    path("create/",PropertyCreateView.as_view(),name="property-create"),
+    path("<int:pk>/update",PropertyUpdateView.as_view(),name="property-update")
 ]
