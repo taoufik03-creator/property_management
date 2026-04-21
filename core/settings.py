@@ -80,15 +80,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #    }
 #}
 
+import dj_database_url
+import os
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'urbanhub_db',
-        'USER': 'urban_admin',
-        'PASSWORD': 'FamilyTOHMR030613',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(default=os.getenv("postgresql://postgres:UFhCVPJQGcdoYlOVekskAqtUzxlIZhkD@postgres-uiwj.railway.internal:5432/railway"))
 }
 
 
