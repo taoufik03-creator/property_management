@@ -80,6 +80,8 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #    }
 #}
 
+CSRF_TRUSTED_ORIGINS=["amiable-miracle-production-93d4.up.railway.app"]
+
 
 import dj_database_url
 import os
